@@ -33,7 +33,7 @@ export const get_category = createAsyncThunk(
             }
         }
         try {
-            const { data } = await axios.get(`/category-get?page=${page}&&searchValue=${searchValue}&&parPage=${parPage}`, config)
+            const { data } = await axios.get(`${base_url}/api/category-get?page=${page}&&searchValue=${searchValue}&&parPage=${parPage}`, config)
             return fulfillWithValue(data)
         } catch (error) {
             return rejectWithValue(error.response.data)
