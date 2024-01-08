@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { base_url } from '../../utils/config'
+
 export const categoryAdd = createAsyncThunk(
     'category/categoryAdd',
     async ({ name, image }, { rejectWithValue, fulfillWithValue, getState }) => {
@@ -23,7 +24,7 @@ export const categoryAdd = createAsyncThunk(
 )
 
 export const get_category = createAsyncThunk(
-    `${base_url}/apicategory/get_category`,
+    'category/get_category',
     async ({ parPage, page, searchValue }, { rejectWithValue, fulfillWithValue, getState }) => {
         const { token } = getState().auth
         const config = {
