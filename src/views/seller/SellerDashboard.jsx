@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BsCurrencyDollar } from 'react-icons/bs'
+//import { BsCurrencyDollar } from 'react-icons/bs'
 import { RiProductHuntLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
@@ -8,6 +8,8 @@ import customer from '../../assets/seller.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { get_seller_dashboard_index_data } from '../../store/Reducers/dashboardIndexReducer'
 import moment from 'moment'
+import { TbCurrencyTaka } from "react-icons/tb";
+
 const SellerDashboard = () => {
 
     const {userInfo} = useSelector(state=>state.auth)
@@ -95,7 +97,7 @@ const SellerDashboard = () => {
                         <span className='text-md font-medium'>Total Sales</span>
                     </div>
                     <div className='w-[46px] h-[47px] rounded-full bg-[#28c76f1f] flex justify-center items-center text-xl'>
-                        <BsCurrencyDollar className='text-[#28c76f] shadow-lg' />
+                        <TbCurrencyTaka className='text-[#28c76f] shadow-lg' />
                     </div>
                 </div>
                 <div className='flex justify-between items-center p-5 bg-[#283046] rounded-md gap-3'>
